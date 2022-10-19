@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton btn_search;
+    private Button btn_search;
 
     @SuppressLint("WrongViewCast")
     @Override

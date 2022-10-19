@@ -4,31 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="411dp"
+        android:layout_height="248dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/front1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
 
     <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginBottom="550dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
-        <ImageButton
+        <Button
             android:id="@+id/btn_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:background="#FFFFFF"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/btn_search"
-            tools:ignore="SpeakableTextPresentCheck" />
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_search"
+            android:drawableRight="@drawable/search_image_size"
+            android:gravity="center_vertical"
+            android:text=" 질병, 진료과, 병원을 검색해보세요."
+            android:textColor="#858585" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/back_g" />
+
     </LinearLayout>
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
