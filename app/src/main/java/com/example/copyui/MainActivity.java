@@ -11,7 +11,11 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btn_search;
+    private Button btn_searchbar;
+    private ImageButton btn_my;
+    private ImageButton btn_list;
+
+
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -19,13 +23,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_search = findViewById(R.id.btn_search);
-        btn_search.setOnClickListener(new View.OnClickListener(){
+        btn_searchbar = findViewById(R.id.btn_searchbar);
+        btn_searchbar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent intent = new Intent(MainActivity.this, search.class);
                 startActivity(intent); // 액티비티 이동.
+                overridePendingTransition(0, 0);
             }
         });
+
+        btn_my = findViewById(R.id.btn_my);
+        btn_my.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, mypage.class);
+                startActivity(intent); // 액티비티 이동.
+                overridePendingTransition(0, 0);
+            }
+        });
+
+        btn_list = findViewById(R.id.btn_list);
+        btn_list.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(MainActivity.this, list.class);
+                startActivity(intent); // 액티비티 이동.
+                overridePendingTransition(0, 0);
+            }
+        });
+
     }
 }

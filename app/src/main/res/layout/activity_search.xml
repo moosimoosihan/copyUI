@@ -5,52 +5,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".search"
-    android:background="@drawable/searchbg">
+    android:background="@color/white">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
         android:layout_marginTop="40dp"
-        android:orientation="horizontal"
+        android:background="@drawable/btn_back"
+        app:layout_constraintEnd_toStartOf="@+id/et_adr"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-        <Button
-            android:id="@+id/btn_back"
-            android:layout_width="43dp"
-            android:layout_height="35dp"
-            android:background="#00ff0000"
-            tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="43dp" />
+    <EditText
+        android:id="@+id/et_adr"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_clear"
+        app:layout_constraintStart_toEndOf="@+id/btn_back"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TextContrastCheck,TouchTargetSizeCheck" />
 
-        <EditText
-            android:id="@+id/et_adr"
-            android:layout_width="262dp"
-            android:layout_height="45dp"
-            android:autofillHints=""
-            android:ems="20"
-            android:inputType="textPersonName"
-            tools:ignore="TouchTargetSizeCheck,TextContrastCheck,SpeakableTextPresentCheck"
-            tools:layout_editor_absoluteX="59dp"
-            tools:layout_editor_absoluteY="43dp" />
+    <Button
+        android:id="@+id/btn_clear"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_clear"
+        app:layout_constraintEnd_toStartOf="@+id/btn_search_adr"
+        app:layout_constraintStart_toEndOf="@+id/et_adr"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-        <Button
-            android:id="@+id/btn_clear"
-            android:layout_width="41dp"
-            android:layout_height="34dp"
-            android:background="#00ff0000"
-            tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck"
-            tools:layout_editor_absoluteX="321dp"
-            tools:layout_editor_absoluteY="43dp" />
+    <Button
+        android:id="@+id/btn_search_adr"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_search1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_clear"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-        <Button
-            android:id="@+id/btn_search_adr"
-            android:layout_width="59dp"
-            android:layout_height="38dp"
-            android:background="#00ff0000"
-            tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck"
-            tools:layout_editor_absoluteX="358dp"
-            tools:layout_editor_absoluteY="42dp" />
-    </LinearLayout>
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="502dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_adr"
+        tools:layout_editor_absoluteX="0dp">
+
+    </ListView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
