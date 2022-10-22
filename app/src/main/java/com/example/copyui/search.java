@@ -36,6 +36,13 @@ public class search extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,data);
         list.setAdapter(adapter);
 
+        data.add("무시무시한스무디");
+        data.add("홍드로이드");
+        data.add("안드로이드");
+        data.add("맥");
+        data.add("사과");
+        adapter.notifyDataSetChanged();
+
         btn_back = findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -45,6 +52,7 @@ public class search extends AppCompatActivity {
                 overridePendingTransition(0, 0);
             }
         });
+
         et_adr = findViewById(R.id.et_adr);
         btn_clear = findViewById(R.id.btn_clear);
 
@@ -55,7 +63,17 @@ public class search extends AppCompatActivity {
             }
         });
 
-        adapter.notifyDataSetChanged();
+        btn_search_adr = findViewById(R.id.btn_search_adr);
+        btn_search_adr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String str = et_adr.getText().toString();
+                data.add(str);
+                adapter.notifyDataSetChanged();
+                et_adr.setText("");
+            }
+        });
+
     }
 }
 

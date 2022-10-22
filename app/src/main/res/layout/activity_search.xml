@@ -56,10 +56,7 @@
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="502dp"
+        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_adr"
-        tools:layout_editor_absoluteX="0dp">
-
-    </ListView>
-
+        app:layout_constraintTop_toBottomOf="@+id/et_adr"></ListView>
 </androidx.constraintlayout.widget.ConstraintLayout>
