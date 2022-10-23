@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class search extends AppCompatActivity {
-
     private Button btn_back;
     private Button btn_clear;
     private EditText et_adr;
