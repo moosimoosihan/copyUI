@@ -17,6 +17,9 @@ import android.widget.ListView;
 
 public class adr_Search extends Fragment {
     private Button btn_back;
+    private Button btn_clear;
+    private EditText et_adr;
+
     MainActivity activity;
 
     private static final String ARG_PARAM1 = "param1";
@@ -73,7 +76,14 @@ public class adr_Search extends Fragment {
                 activity.onFragmentChange(1);
             }
         });
-
+        btn_clear = (Button) rootView.findViewById(R.id.btn_clear);
+        et_adr = (EditText) rootView.findViewById(R.id.et_adr);
+        btn_clear.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                et_adr.setText(null);
+            }
+        });
         return rootView;
     }
 
