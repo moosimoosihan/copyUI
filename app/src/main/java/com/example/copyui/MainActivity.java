@@ -1,12 +1,18 @@
 package com.example.copyui;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 
 import com.google.android.material.navigation.NavigationBarView;
@@ -16,8 +22,10 @@ public class MainActivity extends AppCompatActivity {
         HomeFragment homeFragment;
         InfoFragment infoFragment;
         SettingFragment settingFragment;
+        adr_Search adr_searchFragment;
 
-    @Override
+        @Nullable
+        @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
@@ -25,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             homeFragment = new HomeFragment();
             infoFragment = new InfoFragment();
             settingFragment = new SettingFragment();
+            adr_searchFragment = new  adr_Search();
 
             getSupportFragmentManager().beginTransaction().replace(R.id.containers, homeFragment).commit();
 
@@ -47,5 +56,14 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+    }//onCreate
+
+    public void onFragmentChange(int index){
+        if(index == 0){
+            getSupportFragmentManager().beginTransaction().replace(R.id.containers,adr_searchFragment).commit();
+        } else if (index == 1){
+            getSupportFragmentManager().beginTransaction().replace(R.id.containers,homeFragment).commit();
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.copyui;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,12 +16,26 @@ import android.widget.ListView;
 
 
 public class adr_Search extends Fragment {
+    private Button btn_back;
+    MainActivity activity;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     private String mParam1;
     private String mParam2;
+
+    @Override
+    public void onAttach(Context context){
+        super.onAttach(context);
+        activity = (MainActivity)getActivity();
+    }
+    @Override
+    public void onDetach(){
+        super.onDetach();
+
+        activity = null;
+    }
 
     public adr_Search() {
         // Required empty public constructor
@@ -49,13 +64,21 @@ public class adr_Search extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         setHasOptionsMenu(true);
-        return inflater.inflate(R.layout.fragment_adr__search, container, false);
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_adr__search, container, false);
+
+        btn_back = (Button) rootView.findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                activity.onFragmentChange(1);
+            }
+        });
+
+        return rootView;
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
     }
 }
