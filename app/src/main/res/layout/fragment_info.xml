@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InfoFragment">
-
+    tools:context=".InfoFragment"
+    android:orientation="vertical"
+    android:gravity="center">
 
     <TextView
         android:layout_width="match_parent"
@@ -12,6 +13,9 @@
         android:textSize="30sp"
         android:layout_gravity="center"
         android:gravity="center_horizontal"
-        android:text="Info Fragment" />
+        android:text="마이페이지"
+        android:textColor="@color/black"/>
+
 
 </LinearLayout>
+

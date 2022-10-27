@@ -3,15 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".SettingFragment">
-
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:textSize="15sp"
         android:layout_gravity="center"
         android:gravity="center_horizontal"
-        android:text="Setting Fragment" />
+        android:text="원하는 병원을 찾아서\n진료를 받아보세요."
+        android:textColor="#757575"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textColor="@color/black"
+        android:background="#FFEB3B"
+        android:layout_marginTop="30dp"
+        android:text="진료받으러 가기 >"
+        />
 
 </LinearLayout>

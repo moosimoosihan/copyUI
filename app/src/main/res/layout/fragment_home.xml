@@ -34,8 +34,17 @@
                 android:text="  질병, 진료과, 병원을 검색해보세요."
                 android:textColor="#858585" />
             </FrameLayout>
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/btn_searchbar">
                 <TextView
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="15dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -52,23 +61,28 @@
                     android:layout_marginRight="10dp"
                     android:text="똑닥으로 접수, 예약하고\n대기 없이 병원 진료!"
                     android:textColor="@color/black"
-                    android:textSize="25sp" />
+                    android:textSize="18sp" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginRight="10dp"
                     android:background="#FFEB3B"
                     android:text="시작하기"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="15dp"/>
+            </LinearLayout>
 
-                <ImageView
+            <ViewFlipper
+                    android:id="@+id/image_slide"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:layout_marginTop="30dp"
-                    android:background="#6E6E6E"/>
+                    android:layout_height="110dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#787878"/>
 
             <TextView
                 android:layout_marginTop="30dp"
