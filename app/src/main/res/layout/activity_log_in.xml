@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogInActivity">
+    tools:context=".LogInActivity"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/logo_image"
@@ -16,6 +17,7 @@
 
     <EditText
         android:id="@+id/email_edit"
+        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/logo_image"
@@ -29,6 +31,7 @@
 
     <EditText
         android:id="@+id/password_edit"
+        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/email_edit"

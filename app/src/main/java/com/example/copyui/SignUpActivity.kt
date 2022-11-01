@@ -9,6 +9,7 @@ import com.example.copyui.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class SignUpActivity : AppCompatActivity() {
@@ -27,8 +28,8 @@ class SignUpActivity : AppCompatActivity() {
         //인증 초기화
         mAuth = Firebase.auth
 
-        //db 초기화(database 빨간색으로 오류)
-        //mDbRef = Firebase.database.reference
+        //db 초기화
+        mDbRef = Firebase.database.reference
 
         binding.signUpBtn.setOnClickListener {
 
