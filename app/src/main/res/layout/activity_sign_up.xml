@@ -26,6 +26,7 @@
         android:background="@drawable/edit_background"
         android:textColor="@color/black"
         android:hint="Name"
+        android:textColorHint="@color/black"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp" />
 
@@ -40,6 +41,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/edit_background"
         android:hint="Email"
+        android:textColorHint="@color/black"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp" />
 
@@ -53,6 +55,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/edit_background"
+        android:textColorHint="@color/black"
         android:hint="password"
         android:inputType="numberPassword"
         android:paddingStart="15dp" />
