@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/logo_image"
-        android:textColorHint="@color/black"
+        android:textColorHint="#656464"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
@@ -42,7 +42,7 @@
         android:background="@drawable/edit_background"
         android:hint="password"
         android:inputType="numberPassword"
-        android:textColorHint="@color/black"
+        android:textColorHint="#656464"
         android:paddingStart="15dp" />
 
     <androidx.appcompat.widget.AppCompatButton
